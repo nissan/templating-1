@@ -31,7 +31,6 @@ install:
 - selenium-standalone install
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then export TEST_CHROME_BINARY=`which google-chrome-stable`; fi
 - export DOTNET_INSTALL_DIR="$PWD/.dotnetcli"
-before_script:
-- selenium-standalone start
 script:
+- selenium-standalone start &
 - ./build.sh
